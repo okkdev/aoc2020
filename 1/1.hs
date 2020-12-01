@@ -15,16 +15,15 @@ input = do
   let ints = map read . lines $ contents
   return ints
 
--- Rewrite target
-targets :: [Int]
-targets = map (2020 -) input
+createTargets :: [Int] -> [Int]
+createTargets = map (2020 -)
 
-schloop :: [Int] -> Int
-schloop (x:xs) = case filter (==x) targets of
-    [n] -> n * (2020 - n)
-    _   -> schloop xs
+schloop (x : xs) targets = case filter (== x) targets of
+  [n] -> n * (2020 - n)
+  _ -> schloop xs targets
 
 main :: IO ()
 main = do
-    list <- input
-    print $ schloop list
+  list <- input
+  let targets = createTargets list
+  print $ schloop list targets
