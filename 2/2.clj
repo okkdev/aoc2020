@@ -25,7 +25,7 @@
 
 (defn validate-password [input]
   (def rules (get-rules (first input)))
-  (def positions (seq (validate-positions input rules [:pos1 :pos2])))
+  (def positions (validate-positions input rules [:pos1 :pos2]))
   (and (some true? positions) (some false? positions)))
 
 (defn check-passwords [input]
