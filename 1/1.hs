@@ -18,12 +18,14 @@ input = do
 createTargets :: [Int] -> [Int]
 createTargets = map (2020 -)
 
-schloop (x : xs) targets = case filter (== x) targets of
-  [n] -> n * (2020 - n)
-  _ -> schloop xs targets
+schloop :: (Num a, Eq a) => [a] -> [a] -> [a] -> a
+schloop [] _ results = product results
+schloop (x : xs) targets results = case filter (== x) targets of
+  [n] -> schloop xs targets $ n : results
+  _   -> schloop xs targets results
 
 main :: IO ()
 main = do
   list <- input
   let targets = createTargets list
-  print $ schloop list targets
+  print $ schloop list targets []
