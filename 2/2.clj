@@ -19,14 +19,14 @@
   (def rchar (last (str/split rule #" ")))
   (hash-map :pos1 rpos1 :pos2 rpos2 :char rchar))
 
-(defn validate-position [input rules pos]
-  (= (get rules :char) (str (nth (last input) (- (get rules pos) 1)))))
+(defn validate-positions [input rules pos]
+  (for [p pos]
+    (= (get rules :char) (str (nth (last input) (- (get rules p) 1))))))
 
 (defn validate-password [input]
   (def rules (get-rules (first input)))
-
-  (if (and (validate-position input rules :pos1) (validate-position input rules :pos2))
-    :true :false))
+  (def positions (seq (validate-positions input rules [:pos1 :pos2])))
+  (and (some true? positions) (some false? positions)))
 
 (defn check-passwords [input]
   (for [i input]
@@ -35,6 +35,6 @@
 (defn run []
   (def input (get-input "input.txt"))
   (def parsed (parse-input input))
-  (println "Matching passwords:" (count (filter #(= % :true) (check-passwords parsed)))))
+  (println "Matching passwords:" (count (filter true? (check-passwords parsed)))))
 
 (run)
