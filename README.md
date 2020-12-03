@@ -20,3 +20,9 @@ Trying some new languages
 - [ ] Scala
 - [ ] Go
 - [ ] Rust
+- [ ] Jelly
+- [ ] Crystal
+- [ ] Pascal
+- [ ] Gleam
+- [ ] IO Lang
+- [ ] Ruby
