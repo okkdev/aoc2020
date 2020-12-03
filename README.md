@@ -2,6 +2,9 @@
 
 https://adventofcode.com/2020/
 
+- Folders -> Days
+- Files -> Parts
+
 Trying some new languages
 
 - [x] Haskell
