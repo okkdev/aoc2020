@@ -1,4 +1,3 @@
-
 function read_file(filename) 
     local file = {}
     for line in io.lines(filename) do 
