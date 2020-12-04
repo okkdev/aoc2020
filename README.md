@@ -3,7 +3,7 @@
 - Folders -> Days
   - Files -> Parts
 
-Trying new a language every day 💦
+Trying a new language every day 💦
 
 Languages used on days:
 
