@@ -3,7 +3,7 @@
 - Folders -> Days
   - Files -> Parts
 
-Trying some new languages
+Trying new a language every day 💦
 
 Languages used on days:
 
@@ -14,18 +14,18 @@ Languages used on days:
 
 Planned languages:
 
-- [ ] Julia
-- [ ] Prolog
-- [ ] Erlang
-- [ ] V
-- [ ] Nim
-- [ ] Go
-- [ ] Rust
-- [ ] Jelly
-- [ ] Crystal
-- [ ] Pascal
-- [ ] Gleam
-- [ ] IO Lang
-- [ ] Ruby
-- [ ] Eta
-- [ ] Cobol
+- - [ ] Julia
+- - [ ] Prolog
+- - [ ] Erlang
+- - [ ] V
+- - [ ] Nim
+- - [ ] Go
+- - [ ] Rust
+- - [ ] Jelly
+- - [ ] Crystal
+- - [ ] Pascal
+- - [ ] Gleam
+- - [ ] IO Lang
+- - [ ] Ruby
+- - [ ] Eta
+- - [ ] Cobol
