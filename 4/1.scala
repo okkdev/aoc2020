@@ -5,7 +5,7 @@ object Day4Part1 {
     return "\\s\\s".r.split(Source.fromFile(file).mkString)
   }
 
-  def check_contents(passports: Array[String]): Int = {
+  def check_passports(passports: Array[String]): Int = {
     var matches = 0
     val pattern =
       "(?=.*byr:)(?=.*iyr:)(?=.*eyr:)(?=.*hgt:)(?=.*hcl:)(?=.*ecl:)(?=.*pid:).*".r
@@ -22,6 +22,6 @@ object Day4Part1 {
   def main(args: Array[String]): Unit = {
     val input = split_file("input.txt")
 
-    println("Valid Passwords: " + check_contents(input))
+    println("Valid Passwords: " + check_passports(input))
   }
 }
