@@ -26,3 +26,4 @@ Trying some new languages
 - [ ] Gleam
 - [ ] IO Lang
 - [ ] Ruby
+- [ ] Eta
