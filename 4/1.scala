@@ -5,12 +5,12 @@ object Day4Part1 {
     return "\\s\\s".r.split(Source.fromFile(file).mkString)
   }
 
-  def check_contents(passwords: Array[String]): Int = {
+  def check_contents(passports: Array[String]): Int = {
     var matches = 0
     val pattern =
       "(?=.*byr:)(?=.*iyr:)(?=.*eyr:)(?=.*hgt:)(?=.*hcl:)(?=.*ecl:)(?=.*pid:).*".r
 
-    for (p <- passwords) {
+    for (p <- passports) {
       if (pattern matches p.replaceAll("\n", "")) {
         matches += 1
       }
