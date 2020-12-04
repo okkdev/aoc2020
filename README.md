@@ -7,10 +7,15 @@
 
 Trying some new languages
 
-- [x] Haskell
-- [x] Clojure
-- [x] Lua
-- [x] Scala (will repeat)
+Languages used on days:
+
+1. [x] Haskell
+1. [x] Clojure
+1. [x] Lua
+1. [x] Scala (will repeat)
+
+Planned languages:
+
 - [ ] Julia
 - [ ] Prolog
 - [ ] Erlang
@@ -25,3 +30,4 @@ Trying some new languages
 - [ ] IO Lang
 - [ ] Ruby
 - [ ] Eta
+- [ ] Cobol
