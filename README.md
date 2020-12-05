@@ -30,3 +30,4 @@ Planned languages:
 - - [ ] Eta
 - - [ ] Cobol
 - - [ ] OCaml
+- - [ ] ReasonML
