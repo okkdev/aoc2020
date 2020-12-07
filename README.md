@@ -12,6 +12,7 @@ Languages used on days:
 1. - [x] Lua
 1. - [x] Scala (will repeat)
 1. - [x] OCaml
+1. - [x] Ruby
 
 Planned languages:
 
@@ -27,7 +28,6 @@ Planned languages:
 - - [ ] Pascal
 - - [ ] Gleam
 - - [ ] IO Lang
-- - [ ] Ruby
 - - [ ] Eta
 - - [ ] Cobol
 - - [ ] ReasonML
