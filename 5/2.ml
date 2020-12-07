@@ -13,12 +13,10 @@ let string_to_list s : char list =
   List.init (String.length s) (String.get s)
 
 let get_seat code range : int * int = 
-  let deduct (low, high) = ((high - low) / 2) + low in
+  let deduct (low, high) = (high + low) / 2 in
   let rec visit (low, high) = function
-    | 'F' :: rem -> visit (low, deduct (low, high)) rem 
-    | 'L' :: rem -> visit (low, deduct (low, high)) rem
-    | 'B' :: rem -> visit (deduct (low, high), high) rem
-    | 'R' :: rem -> visit (deduct (low, high), high) rem
+    | x :: rem when x = 'F' || x = 'L' -> visit (low, deduct (low, high)) rem
+    | x :: rem when x = 'B' || x = 'R' -> visit (deduct (low, high), high) rem
     | x :: rem -> visit (low, high) rem
     | [] -> (low, high) in
   visit range code
