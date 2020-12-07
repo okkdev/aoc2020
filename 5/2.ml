@@ -12,10 +12,6 @@ let read_lines name : string list =
 let string_to_list s : char list =
   List.init (String.length s) (String.get s)
 
-let max = function
-  | [] -> invalid_arg "empty list"
-  | x :: xs -> List.fold_left max x xs
-
 let get_seat code range : int * int = 
   let deduct (low, high) = ((high - low) / 2) + low in
   let rec visit (low, high) = function
