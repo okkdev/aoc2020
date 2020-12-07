@@ -18,15 +18,14 @@ let max = function
 
 let get_seat code range : int * int = 
   let deduct (low, high) = ((high - low) / 2) + low in
-  let rec visit xs (low, high) =
-    match xs with
-    | 'F' :: rem -> visit rem (low, deduct (low, high))
-    | 'L' :: rem -> visit rem (low, deduct (low, high))
-    | 'B' :: rem -> visit rem (deduct (low, high), high)
-    | 'R' :: rem -> visit rem (deduct (low, high), high)
-    | x :: rem -> visit rem (low, high)
+  let rec visit (low, high) = function
+    | 'F' :: rem -> visit (low, deduct (low, high)) rem 
+    | 'L' :: rem -> visit (low, deduct (low, high)) rem
+    | 'B' :: rem -> visit (deduct (low, high), high) rem
+    | 'R' :: rem -> visit (deduct (low, high), high) rem
+    | x :: rem -> visit (low, high) rem
     | [] -> (low, high) in
-  visit code range
+  visit range code
 
 let get_row code : int =
   let rowCode = string_to_list (String.sub code 0 7) in
